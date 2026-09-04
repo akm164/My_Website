@@ -3,7 +3,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Aalok Mandal | Portfolio</title>
-    <meta name="description" content="Portfolio of Aalok Mandal showcasing projects, skills, experience, and interactive 3D design.">
+    <meta name="description"
+        content="Portfolio of Aalok Mandal showcasing projects, skills, experience, and interactive 3D design.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://akm164.github.io/My3DWebsite/">
 
@@ -13,7 +14,7 @@
       "@type": "Person",
       "name": "Aalok Mandal",
       "url": "https://akm164.github.io/My3DWebsite/",
-      "image": "https://akm164.github.io/My3DWebsite/images/mypicture.jpg",
+      "image": "https://akm164.github.io/My3DWebsite/images/myimage.png",
       "jobTitle": "Software Engineer • Data Science & AI Specialist",
       "sameAs": [
         "https://github.com/akm164",
@@ -23,8 +24,11 @@
     </script>
 
     <meta property="og:title" content="Aalok Mandal | Portfolio">
-    <meta property="og:description" content="Portfolio of Aalok Mandal showcasing projects, skills, experience, and interactive 3D design.">
-    <meta property="og:image" content="https://akm164.github.io/My3DWebsite/images/mypicture.jpg">
+    <meta property="og:description"
+        content="Portfolio of Aalok Mandal showcasing projects, skills, experience, and interactive 3D design.">
+    <meta property="og:image" content="https://akm164.github.io/My3DWebsite/images/myimage.png">
+    <meta property="og:image:secure_url" content="https://akm164.github.io/My3DWebsite/images/myimage.png">
+    <meta property="og:image:type" content="image/png">
     <meta property="og:url" content="https://akm164.github.io/My3DWebsite/">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
@@ -35,12 +39,15 @@
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Aalok Mandal | Portfolio">
-    <meta name="twitter:description" content="Portfolio of Aalok Mandal showcasing projects, skills, experience, and interactive 3D design.">
-    <meta name="twitter:image" content="https://akm164.github.io/My3DWebsite/images/mypicture.jpg">
+    <meta name="twitter:description"
+        content="Portfolio of Aalok Mandal showcasing projects, skills, experience, and interactive 3D design.">
+    <meta name="twitter:image" content="https://akm164.github.io/My3DWebsite/images/myimage.png">
     <meta name="twitter:image:alt" content="Portrait of Aalok Mandal">
 
-    <link rel="icon" type="image/png" href="https://akm164.github.io/My3DWebsite/images/mypicture-favicon.png">
-    <link rel="apple-touch-icon" href="https://akm164.github.io/My3DWebsite/images/mypicture-favicon.png">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="icon" type="image/png" href="images/favicon-round.png">
+    <link rel="shortcut icon" type="image/png" href="images/favicon-round.png">
+    <link rel="apple-touch-icon" href="images/favicon-round.png">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -57,6 +64,7 @@
             overflow: hidden;
             perspective: 1000px;
         }
+
         .cube {
             position: absolute;
             width: 100%;
@@ -64,6 +72,7 @@
             transform-style: preserve-3d;
             animation: rotate 20s infinite linear;
         }
+
         .face {
             position: absolute;
             width: 200px;
@@ -74,34 +83,47 @@
             box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(5px);
         }
+
         .face:nth-child(1) {
             transform: rotateY(0deg) translateZ(100px);
             background: rgba(56, 182, 255, 0.1);
         }
+
         .face:nth-child(2) {
             transform: rotateY(90deg) translateZ(100px);
             background: rgba(255, 56, 182, 0.1);
         }
+
         .face:nth-child(3) {
             transform: rotateY(180deg) translateZ(100px);
             background: rgba(182, 255, 56, 0.1);
         }
+
         .face:nth-child(4) {
             transform: rotateY(270deg) translateZ(100px);
             background: rgba(255, 182, 56, 0.1);
         }
+
         .face:nth-child(5) {
             transform: rotateX(90deg) translateZ(100px);
             background: rgba(56, 255, 182, 0.1);
         }
+
         .face:nth-child(6) {
             transform: rotateX(270deg) translateZ(100px);
             background: rgba(182, 56, 255, 0.1);
         }
+
         @keyframes rotate {
-            from { transform: rotateX(0deg) rotateY(0deg); }
-            to { transform: rotateX(360deg) rotateY(360deg); }
+            from {
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+
+            to {
+                transform: rotateX(360deg) rotateY(360deg);
+            }
         }
+
         /* Floating cubes */
         .floating-cube {
             position: absolute;
@@ -112,41 +134,81 @@
             border-radius: 5px;
             animation: float 15s infinite ease-in-out;
         }
+
         @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-100px) rotate(180deg); }
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-100px) rotate(180deg);
+            }
         }
+
         /* Custom scrollbar */
         ::-webkit-scrollbar {
             width: 10px;
         }
+
         ::-webkit-scrollbar-track {
             background: rgba(0, 0, 0, 0.1);
         }
+
         ::-webkit-scrollbar-thumb {
             background: rgba(255, 255, 255, 0.3);
             border-radius: 5px;
         }
+
         /* Smooth transitions */
         .transition-all {
             transition: all 0.3s ease;
         }
+
         /* Card hover effect */
         .card-hover:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
+
         /* Skill cards */
         .skill-card {
+            position: relative;
             perspective: 1000px;
             cursor: pointer;
             transition: all 0.5s ease;
         }
+
+        .skill-card:hover,
+        .skill-card:focus-within,
+        .skill-card.active {
+            transform: translateY(-6px);
+        }
+
         .skill-main {
+            position: relative;
+            isolation: isolate;
+            border-radius: 1rem;
             transition: all 0.5s ease;
             transform-style: preserve-3d;
             backface-visibility: hidden;
         }
+
+        .skill-details>div {
+            position: relative;
+            isolation: isolate;
+            border-radius: 1rem;
+            transition: all 0.5s ease;
+        }
+
+        .skill-card:hover .skill-main,
+        .skill-card:focus-within .skill-main,
+        .skill-card.active .skill-main {
+            background: rgba(17, 24, 39, 0.55);
+            box-shadow: 0 0 0 1px rgba(148, 163, 184, 0.15), 0 14px 30px rgba(15, 23, 42, 0.3);
+        }
+
         .skill-details {
             transform: rotateX(90deg);
             transform-origin: top center;
@@ -157,13 +219,16 @@
             left: 0;
             z-index: 10;
         }
+
         .skill-card.active .skill-main {
             transform: rotateX(-90deg);
         }
+
         .skill-card.active .skill-details {
             transform: rotateX(0deg);
             display: block !important;
         }
+
         /* Phone number reveal animation */
         .phone-reveal {
             position: fixed;
@@ -171,7 +236,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.8);
+            background: rgba(0, 0, 0, 0.8);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -180,10 +245,12 @@
             pointer-events: none;
             transition: all 0.5s ease;
         }
+
         .phone-reveal.active {
             opacity: 1;
             pointer-events: all;
         }
+
         .phone-number {
             font-size: 3rem;
             color: white;
@@ -192,17 +259,39 @@
             opacity: 0;
             transition: all 0.5s ease 0.3s;
         }
+
         .phone-reveal.active .phone-number {
             transform: scale(1);
             opacity: 1;
         }
+
         /* Navbar glass effect */
         .navbar-glass {
             backdrop-filter: blur(10px);
             background: rgba(15, 23, 42, 0.7);
         }
+
+        .profile-image {
+            width: 12rem;
+            height: 12rem;
+            border-radius: 50% !important;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            aspect-ratio: 1 / 1;
+            clip-path: circle(50% at 50% 50%);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        @media (min-width: 768px) {
+            .profile-image {
+                width: 13rem;
+                height: 13rem;
+            }
+        }
     </style>
 </head>
+
 <body class="bg-gray-900 text-white min-h-screen overflow-x-hidden">
     <!-- 3D Animated Background -->
     <div class="bg-3d">
@@ -226,7 +315,8 @@
         <nav class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
                 <div class="flex items-center">
-                    <a href="#" class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
+                    <a href="#"
+                        class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
                         <i class="fas fa-cube mr-2"></i>Aalok Mandal
                     </a>
                 </div>
@@ -242,7 +332,9 @@
                     <a href="#portfolio" class="text-gray-300 hover:text-blue-400 transition-all">Portfolio</a>
                     <a href="#about" class="text-gray-300 hover:text-blue-400 transition-all">About</a>
                     <a href="#contact" class="text-gray-300 hover:text-blue-400 transition-all">Contact</a>
-                    <a href="assets/Aalok_Mandal_Resume.pdf" download class="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full hover:from-blue-600 hover:to-purple-700 transition-all">Download CV</a>
+                    <a href="assets/Aalok_Mandal_Resume.pdf" download
+                        class="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full hover:from-blue-600 hover:to-purple-700 transition-all">Download
+                        CV</a>
                 </div>
             </div>
             <!-- Mobile Menu -->
@@ -252,7 +344,9 @@
                     <a href="#portfolio" class="text-gray-300 hover:text-blue-400 transition-all">Portfolio</a>
                     <a href="#about" class="text-gray-300 hover:text-blue-400 transition-all">About</a>
                     <a href="#contact" class="text-gray-300 hover:text-blue-400 transition-all">Contact</a>
-                    <a href="assets/Aalok_Mandal_Resume.pdf" download class="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full text-center hover:from-blue-600 hover:to-purple-700 transition-all">Download CV</a>
+                    <a href="assets/Aalok_Mandal_Resume.pdf" download
+                        class="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full text-center hover:from-blue-600 hover:to-purple-700 transition-all">Download
+                        CV</a>
                 </div>
             </div>
         </nav>
@@ -262,32 +356,43 @@
         <div class="container mx-auto flex flex-col md:flex-row items-center">
             <div class="md:w-1/2 mb-12 md:mb-0">
                 <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                    Welcome to <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">My Website</span>
+                    Welcome to <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">My
+                        Website</span>
                 </h1>
                 <p class="text-xl text-gray-300 mb-8">
-                    Developing innovative, intelligent solutions by seamlessly integrating robust, efficient code with deep, actionable data insights and bold, imaginative creativity.
+                    Developing innovative, intelligent solutions by seamlessly integrating robust, efficient code with
+                    deep, actionable data insights and bold, imaginative creativity.
                 </p>
                 <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                    <a href="#skills" class="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full text-center font-semibold hover:from-blue-600 hover:to-purple-700 transition-all transform hover:scale-105">
+                    <a href="#skills"
+                        class="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full text-center font-semibold hover:from-blue-600 hover:to-purple-700 transition-all transform hover:scale-105">
                         My Skills
                     </a>
                     <div class="flex space-x-4">
-                        <a href="https://github.com/akm164" target="_blank" class="px-8 py-4 border border-gray-700 rounded-full text-center font-semibold hover:bg-gray-800 transition-all transform hover:scale-105">
+                        <a href="https://github.com/akm164" target="_blank"
+                            class="px-8 py-4 border border-gray-700 rounded-full text-center font-semibold hover:bg-gray-800 transition-all transform hover:scale-105">
                             <i class="fab fa-github mr-2"></i>Github
                         </a>
-                        <a href="https://www.linkedin.com/in/aalok-mandal-a80a8536b/" target="_blank" class="px-8 py-4 border border-gray-700 rounded-full text-center font-semibold hover:bg-gray-800 transition-all transform hover:scale-105">
+                        <a href="https://www.linkedin.com/in/aalok-mandal-a80a8536b/" target="_blank"
+                            class="px-8 py-4 border border-gray-700 rounded-full text-center font-semibold hover:bg-gray-800 transition-all transform hover:scale-105">
                             <i class="fab fa-linkedin mr-2"></i>LinkedIn
                         </a>
                     </div>
                 </div>
             </div>
             <div class="md:w-1/2 relative">
-                <div class="relative w-full h-96 bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-2xl overflow-hidden border border-gray-700/50">
+                <div
+                    class="relative w-full h-96 bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-2xl overflow-hidden border border-gray-700/50">
                     <div class="absolute inset-0 flex items-center justify-center">
-                        <div class="w-64 h-64 bg-gradient-to-r from-blue-400/30 to-purple-600/30 rounded-full animate-pulse"></div>
+                        <div
+                            class="w-64 h-64 bg-gradient-to-r from-blue-400/30 to-purple-600/30 rounded-full animate-pulse">
+                        </div>
                     </div>
                     <div class="absolute inset-0 flex items-center justify-center">
-                        <div class="w-40 h-40 bg-gradient-to-r from-blue-400/40 to-purple-600/40 rounded-full animate-ping"></div>
+                        <div
+                            class="w-40 h-40 bg-gradient-to-r from-blue-400/40 to-purple-600/40 rounded-full animate-ping">
+                        </div>
                     </div>
                     <div class="absolute inset-0 flex items-center justify-center">
                         <i class="fas fa-cube text-8xl text-white/20 animate-spin"></i>
@@ -307,14 +412,18 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Project 1 -->
-                <div class="group relative bg-gray-800/50 rounded-2xl border border-gray-700/50 transition-all card-hover overflow-hidden">
+                <div
+                    class="group relative bg-gray-800/50 rounded-2xl border border-gray-700/50 transition-all card-hover overflow-hidden">
                     <div class="relative h-64 overflow-hidden">
-                        <img src="images/project1.jpg" alt="AI-Powered E-commerce" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <img src="images/project1.jpg" alt="AI-Powered E-commerce"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
                             <div>
                                 <div class="flex flex-wrap gap-2 mb-3">
-                                    <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">AI/ML</span>
-                                    <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">Full Stack</span>
+                                    <span
+                                        class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">AI/ML</span>
+                                    <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">Full
+                                        Stack</span>
                                 </div>
                                 <h3 class="text-2xl font-bold">AI-Powered E-commerce</h3>
                             </div>
@@ -322,28 +431,39 @@
                     </div>
                     <div class="p-6">
                         <p class="text-gray-300 mb-4">
-                            Built a recommendation engine using TensorFlow that increased sales by 32%. Integrated with Stripe for payments and deployed on AWS.
+                            Built a recommendation engine using TensorFlow that increased sales by 32%. Integrated with
+                            Stripe for payments and deployed on AWS.
                         </p>
                         <div class="flex items-center justify-between">
-                            <a href="https://github.com/akm164/AI-Powered-E-commerce" class="text-blue-400 hover:text-blue-300 transition-all flex items-center" target="_blank" rel="noopener noreferrer">
+                            <a href="https://github.com/akm164/AI-Powered-E-commerce"
+                                class="text-blue-400 hover:text-blue-300 transition-all flex items-center"
+                                target="_blank" rel="noopener noreferrer">
                                 View Project <i class="fas fa-arrow-right ml-2"></i>
                             </a>
                             <div class="flex space-x-3">
-                                <a href="https://github.com/akm164/AI-Powered-E-commerce" class="text-gray-400 hover:text-white" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-                                <a href="https://akm164.github.io/AI-Powered-E-commerce/" class="text-gray-400 hover:text-white" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="https://github.com/akm164/AI-Powered-E-commerce"
+                                    class="text-gray-400 hover:text-white" target="_blank" rel="noopener noreferrer"><i
+                                        class="fab fa-github"></i></a>
+                                <a href="https://akm164.github.io/AI-Powered-E-commerce/"
+                                    class="text-gray-400 hover:text-white" target="_blank" rel="noopener noreferrer"><i
+                                        class="fas fa-external-link-alt"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Project 2 -->
-                <div class="group relative bg-gray-800/50 rounded-2xl border border-gray-700/50 transition-all card-hover overflow-hidden">
+                <div
+                    class="group relative bg-gray-800/50 rounded-2xl border border-gray-700/50 transition-all card-hover overflow-hidden">
                     <div class="relative h-64 overflow-hidden">
-                        <img src="images/project2.jpg" alt="Data Visualization Dashboard" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <img src="images/project2.jpg" alt="Data Visualization Dashboard"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
                             <div>
                                 <div class="flex flex-wrap gap-2 mb-3">
-                                    <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Data Science</span>
-                                    <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">React</span>
+                                    <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Data
+                                        Science</span>
+                                    <span
+                                        class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">React</span>
                                 </div>
                                 <h3 class="text-2xl font-bold">Data Visualization Dashboard</h3>
                             </div>
@@ -351,7 +471,8 @@
                     </div>
                     <div class="p-6">
                         <p class="text-gray-300 mb-4">
-                            Interactive dashboard for financial data analysis using D3.js and React. Processes millions of records with optimized backend in Node.js.
+                            Interactive dashboard for financial data analysis using D3.js and React. Processes millions
+                            of records with optimized backend in Node.js.
                         </p>
                         <div class="flex items-center justify-between">
                             <a href="#" class="text-blue-400 hover:text-blue-300 transition-all flex items-center">
@@ -359,20 +480,25 @@
                             </a>
                             <div class="flex space-x-3">
                                 <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-github"></i></a>
-                                <a href="#" class="text-gray-400 hover:text-white"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="text-gray-400 hover:text-white"><i
+                                        class="fas fa-external-link-alt"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Project 3 -->
-                <div class="group relative bg-gray-800/50 rounded-2xl border border-gray-700/50 transition-all card-hover overflow-hidden">
+                <div
+                    class="group relative bg-gray-800/50 rounded-2xl border border-gray-700/50 transition-all card-hover overflow-hidden">
                     <div class="relative h-64 overflow-hidden">
-                        <img src="images/project3.jpg" alt="Cloud Migration Tool" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <img src="images/project3.jpg" alt="Cloud Migration Tool"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
                             <div>
                                 <div class="flex flex-wrap gap-2 mb-3">
-                                    <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Cloud</span>
-                                    <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">DevOps</span>
+                                    <span
+                                        class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Cloud</span>
+                                    <span
+                                        class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">DevOps</span>
                                 </div>
                                 <h3 class="text-2xl font-bold">Cloud Migration Tool</h3>
                             </div>
@@ -380,7 +506,8 @@
                     </div>
                     <div class="p-6">
                         <p class="text-gray-300 mb-4">
-                            Automated cloud migration solution that reduced deployment times by 75%. Supports AWS, Azure and GCP with Terraform infrastructure as code.
+                            Automated cloud migration solution that reduced deployment times by 75%. Supports AWS, Azure
+                            and GCP with Terraform infrastructure as code.
                         </p>
                         <div class="flex items-center justify-between">
                             <a href="#" class="text-blue-400 hover:text-blue-300 transition-all flex items-center">
@@ -388,20 +515,25 @@
                             </a>
                             <div class="flex space-x-3">
                                 <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-github"></i></a>
-                                <a href="#" class="text-gray-400 hover:text-white"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="text-gray-400 hover:text-white"><i
+                                        class="fas fa-external-link-alt"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Project 4 -->
-                <div class="group relative bg-gray-800/50 rounded-2xl border border-gray-700/50 transition-all card-hover overflow-hidden">
+                <div
+                    class="group relative bg-gray-800/50 rounded-2xl border border-gray-700/50 transition-all card-hover overflow-hidden">
                     <div class="relative h-64 overflow-hidden">
-                        <img src="images/project4.jpg" alt="ML Fraud Detection" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <img src="images/project4.jpg" alt="ML Fraud Detection"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
                             <div>
                                 <div class="flex flex-wrap gap-2 mb-3">
-                                    <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">AI/ML</span>
-                                    <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">Python</span>
+                                    <span
+                                        class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">AI/ML</span>
+                                    <span
+                                        class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">Python</span>
                                 </div>
                                 <h3 class="text-2xl font-bold">ML Fraud Detection</h3>
                             </div>
@@ -409,7 +541,8 @@
                     </div>
                     <div class="p-6">
                         <p class="text-gray-300 mb-4">
-                            Machine learning model that detects fraudulent transactions with 98% accuracy. Built with Scikit-learn and deployed as a microservice.
+                            Machine learning model that detects fraudulent transactions with 98% accuracy. Built with
+                            Scikit-learn and deployed as a microservice.
                         </p>
                         <div class="flex items-center justify-between">
                             <a href="#" class="text-blue-400 hover:text-blue-300 transition-all flex items-center">
@@ -417,7 +550,8 @@
                             </a>
                             <div class="flex space-x-3">
                                 <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-github"></i></a>
-                                <a href="#" class="text-gray-400 hover:text-white"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="text-gray-400 hover:text-white"><i
+                                        class="fas fa-external-link-alt"></i></a>
                             </div>
                         </div>
                     </div>
@@ -429,12 +563,21 @@
     <section id="about" class="py-20 px-6">
         <div class="container mx-auto flex flex-col md:flex-row items-center">
             <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12">
-                <div class="relative w-full h-96 bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-2xl overflow-hidden border border-gray-700/50">
+                <div
+                    class="relative w-full h-96 bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-2xl overflow-hidden border border-gray-700/50">
                     <div class="absolute inset-0 flex items-center justify-center">
-                        <div class="w-48 h-48 bg-gradient-to-r from-blue-400/30 to-purple-600/30 rounded-full animate-pulse"></div>
+                        <img src="images/myimage.png" alt="Aalok Mandal"
+                            class="profile-image border-4 border-white/20 shadow-[0_0_30px_rgba(96,165,250,0.35)]">
                     </div>
                     <div class="absolute inset-0 flex items-center justify-center">
-                        <div class="w-32 h-32 bg-gradient-to-r from-blue-400/40 to-purple-600/40 rounded-full animate-ping"></div>
+                        <div
+                            class="w-48 h-48 bg-gradient-to-r from-blue-400/30 to-purple-600/30 rounded-full animate-pulse">
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div
+                            class="w-32 h-32 bg-gradient-to-r from-blue-400/40 to-purple-600/40 rounded-full animate-ping">
+                        </div>
                     </div>
                     <div class="absolute inset-0 flex items-center justify-center">
                         <i class="fas fa-user-astronaut text-8xl text-white/20 animate-bounce"></i>
@@ -444,10 +587,14 @@
             <div class="md:w-1/2">
                 <h2 class="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
                 <p class="text-gray-300 mb-6">
-                    I'm a computer science student pursuing a double major in Software Engineering and AI & Data Science. I have a deep passion for coding and analytical problem solving, which drives me to develop efficient algorithms and innovative data-driven models.
+                    I'm a computer science student pursuing a double major in Software Engineering and AI & Data
+                    Science. I have a deep passion for coding and analytical problem solving, which drives me to develop
+                    efficient algorithms and innovative data-driven models.
                 </p>
                 <p class="text-gray-300 mb-8">
-                    Blending logical rigor with creative thinking, I strive to transform abstract ideas into practical, intelligent solutions. I constantly push boundaries to harness technology's transformative power in every project I undertake.
+                    Blending logical rigor with creative thinking, I strive to transform abstract ideas into practical,
+                    intelligent solutions. I constantly push boundaries to harness technology's transformative power in
+                    every project I undertake.
                 </p>
                 <div class="flex flex-wrap gap-4">
                     <div class="flex items-center">
@@ -567,27 +714,34 @@
                 <form id="contact-form" action="https://formspree.io/f/xzdjgogd" method="POST" class="space-y-6">
                     <!-- Hidden fields for Formspree -->
                     <input type="hidden" name="_subject" value="New Contact Form Submission from Website">
-                    
+
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label for="name" class="block mb-2">Your Name</label>
-                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all">
+                            <input type="text" id="name" name="name" required
+                                class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
                         <div>
                             <label for="email" class="block mb-2">Your Email</label>
-                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all">
+                            <input type="email" id="email" name="email" required
+                                class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
                     </div>
                     <div>
                         <label for="subject" class="block mb-2">Subject</label>
-                        <input type="text" id="subject" name="subject" class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all" required>
+                        <input type="text" id="subject" name="subject"
+                            class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+                            required>
                     </div>
                     <div>
                         <label for="message" class="block mb-2">Message</label>
-                        <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all" required></textarea>
+                        <textarea id="message" name="message" rows="5"
+                            class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+                            required></textarea>
                     </div>
                     <div>
-                        <button type="submit" class="w-full px-6 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all transform hover:scale-105">
+                        <button type="submit"
+                            class="w-full px-6 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all transform hover:scale-105">
                             Send Message
                         </button>
                     </div>
@@ -604,14 +758,16 @@
                         <i class="fas fa-cube mr-2"></i> I Develop
                     </h3>
                     <p class="text-gray-400">
-                        I develop versatile digital experiences from sleek personal sites to dynamic cleaning service platforms and beyond using robust software development and creative problem solving.
+                        I develop versatile digital experiences from sleek personal sites to dynamic cleaning service
+                        platforms and beyond using robust software development and creative problem solving.
                     </p>
                 </div>
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
                     <ul class="space-y-2">
                         <li><a href="#home" class="text-gray-400 hover:text-white transition-all">Home</a></li>
-                        <li><a href="#portfolio" class="text-gray-400 hover:text-white transition-all">Portfolio</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-white transition-all">Portfolio</a>
+                        </li>
                         <li><a href="#about" class="text-gray-400 hover:text-white transition-all">About</a></li>
                         <li><a href="#contact" class="text-gray-400 hover:text-white transition-all">Contact</a></li>
                     </ul>
@@ -619,13 +775,16 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Connect With Me</h4>
                     <div class="flex flex-col space-y-4">
-                        <a href="https://x.com/aalokmandal19?s=21&t=587uRgk4qQBlxn-FsGu8lQ" target="_blank" class="text-gray-400 hover:text-white transition-all">
+                        <a href="https://x.com/aalokmandal19?s=21&t=587uRgk4qQBlxn-FsGu8lQ" target="_blank"
+                            class="text-gray-400 hover:text-white transition-all">
                             <i class="fab fa-twitter mr-2"></i> Twitter
                         </a>
-                        <a href="https://www.facebook.com/share/1N8EB4w91u/?mibextid=wwXIfr" target="_blank" class="text-gray-400 hover:text-white transition-all">
+                        <a href="https://www.facebook.com/share/1N8EB4w91u/?mibextid=wwXIfr" target="_blank"
+                            class="text-gray-400 hover:text-white transition-all">
                             <i class="fab fa-facebook mr-2"></i> Facebook
                         </a>
-                        <a href="https://www.instagram.com/aalokmondate91?igsh=MWJzOHU2dzU1a2x3Yg%3D%3D&utm_source=qr" target="_blank" class="text-gray-400 hover:text-white transition-all">
+                        <a href="https://www.instagram.com/aalokmondate91?igsh=MWJzOHU2dzU1a2x3Yg%3D%3D&utm_source=qr"
+                            target="_blank" class="text-gray-400 hover:text-white transition-all">
                             <i class="fab fa-instagram mr-2"></i> Instagram
                         </a>
                         <a href="#" id="phone-link" class="text-gray-400 hover:text-white transition-all">
@@ -639,8 +798,10 @@
                         For any inquiries about my work, please feel free to drop me an email.
                     </p>
                     <form class="flex">
-                        <input type="email" placeholder="aalokm875@gmail.com" class="px-4 py-2 bg-gray-700/50 border border-gray-600 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all w-full">
-                        <button type="submit" class="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-r-lg hover:from-blue-600 hover:to-purple-700 transition-all">
+                        <input type="email" placeholder="aalokm875@gmail.com"
+                            class="px-4 py-2 bg-gray-700/50 border border-gray-600 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all w-full">
+                        <button type="submit"
+                            class="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-r-lg hover:from-blue-600 hover:to-purple-700 transition-all">
                             <i class="fas fa-paper-plane"></i>
                         </button>
                     </form>
@@ -652,7 +813,8 @@
         </div>
     </footer>
     <!-- Back to Top Button -->
-    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white shadow-lg transition-all opacity-0 invisible transform translate-y-4">
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white shadow-lg transition-all opacity-0 invisible transform translate-y-4">
         <i class="fas fa-arrow-up"></i>
     </button>
     <script>
@@ -698,16 +860,16 @@
         });
         // Form submission with Formspree
         const contactForm = document.getElementById('contact-form');
-        contactForm.addEventListener('submit', async function(e) {
+        contactForm.addEventListener('submit', async function (e) {
             e.preventDefault();
             const formData = new FormData(contactForm);
             const submitButton = contactForm.querySelector('button[type="submit"]');
             const originalButtonText = submitButton.innerText;
-            
+
             // Show loading state
             submitButton.disabled = true;
             submitButton.innerText = 'Sending...';
-            
+
             try {
                 const response = await fetch(contactForm.action, {
                     method: 'POST',
@@ -716,7 +878,7 @@
                         'Accept': 'application/json'
                     }
                 });
-                
+
                 if (response.ok) {
                     alert('Thank you for your message! We will get back to you soon.');
                     contactForm.reset();
@@ -739,30 +901,25 @@
         // Skill cards interaction
         const skillCards = document.querySelectorAll('.skill-card');
         skillCards.forEach(card => {
-            card.addEventListener('click', function() {
-                // Close other open cards first
-                skillCards.forEach(c => {
-                    if (c !== this) {
-                        c.classList.remove('active');
+            const openCard = () => {
+                skillCards.forEach(otherCard => {
+                    if (otherCard !== card) {
+                        otherCard.classList.remove('active');
                     }
                 });
-                // Toggle current card
-                this.classList.toggle('active');
-                // Add floating cubes animation
-                if (this.classList.contains('active')) {
-                    const skillType = this.dataset.skill;
+                if (!card.classList.contains('active')) {
+                    card.classList.add('active');
+                    const skillType = card.dataset.skill;
                     const colors = {
                         ai: 'rgba(56, 182, 255, 0.3)',
                         data: 'rgba(255, 56, 182, 0.3)',
                         full: 'rgba(182, 255, 56, 0.3)',
                         cloud: 'rgba(255, 182, 56, 0.3)'
                     };
-                    // Create floating cubes specific to this skill
-                    const rect = this.getBoundingClientRect();
+                    const rect = card.getBoundingClientRect();
                     for (let i = 0; i < 5; i++) {
                         const cube = document.createElement('div');
                         cube.className = 'floating-cube skill-cube';
-                        // Position around the clicked card
                         const x = rect.left + (Math.random() * rect.width);
                         const y = rect.top + (Math.random() * rect.height);
                         cube.style.cssText = `
@@ -774,13 +931,21 @@
                             animation: float 5s infinite ease-in-out ${i * 0.2}s;
                         `;
                         document.body.appendChild(cube);
-                        // Remove after animation
                         setTimeout(() => {
                             cube.remove();
                         }, 5000);
                     }
                 }
-            });
+            };
+
+            const closeCard = () => {
+                card.classList.remove('active');
+            };
+
+            card.addEventListener('mouseenter', openCard);
+            card.addEventListener('focusin', openCard);
+            card.addEventListener('mouseleave', closeCard);
+            card.addEventListener('focusout', closeCard);
         });
         // Add more floating cubes dynamically
         function addFloatingCubes() {
@@ -849,4 +1014,5 @@
         });
     </script>
 </body>
+
 </html>
