@@ -983,19 +983,6 @@
         }
         // Call the function to add cubes
         addFloatingCubes();
-        // Parallax effect for hero section
-        window.addEventListener('mousemove', (e) => {
-            const x = e.clientX / window.innerWidth;
-            const y = e.clientY / window.innerHeight;
-            const heroContent = document.querySelector('#home > div > div:first-child');
-            if (heroContent) {
-                heroContent.style.transform = `translate(${x * 20 - 10}px, ${y * 20 - 10}px)`;
-            }
-            const heroImage = document.querySelector('#home > div > div:last-child');
-            if (heroImage) {
-                heroImage.style.transform = `translate(${x * -20 + 10}px, ${y * -20 + 10}px)`;
-            }
-        });
     </script>
     <!-- Phone reveal overlay -->
     <div class="phone-reveal">
